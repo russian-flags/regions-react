@@ -1,0 +1,99 @@
+{
+  "name": "@russian-flags/regions-react",
+  "version": "1.0.0",
+  "description": "React components and lazy loaders for flags of Russian regions.",
+  "keywords": [
+    "react",
+    "svg",
+    "flags",
+    "russia",
+    "russian-regions",
+    "regions",
+    "rf",
+    "russian-flags",
+    "субъекты-рф",
+    "флаги-регионов"
+  ],
+  "homepage": "https://github.com/russian-flags/regions-react#readme",
+  "bugs": {
+    "url": "https://github.com/russian-flags/regions-react/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/russian-flags/regions-react.git"
+  },
+  "author": "lKolabrodl",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "license": "MIT",
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "README.en.md",
+    "LICENSE"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./dynamic": {
+      "types": "./dist/dynamic.d.ts",
+      "import": "./dist/dynamic.js"
+    },
+    "./meta": {
+      "types": "./dist/meta.d.ts",
+      "import": "./dist/meta.js"
+    },
+    "./regions": {
+      "types": "./dist/regions.d.ts",
+      "import": "./dist/regions.js"
+    },
+    "./region-flag": {
+      "types": "./dist/react/RegionFlag.d.ts",
+      "import": "./dist/react/RegionFlag.js"
+    },
+    "./flags/*": {
+      "types": "./dist/flags/*.d.ts",
+      "import": "./dist/flags/*.js"
+    },
+    "./svg/*": {
+      "types": "./dist/svg/*.svg.d.ts",
+      "import": "./dist/svg/*.svg.js"
+    },
+    "./svg/*.svg": {
+      "types": "./dist/svg/*.svg.d.ts",
+      "import": "./dist/svg/*.svg.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "clean": "node scripts/clean.mjs",
+    "build:js": "node scripts/build.mjs",
+    "build:types": "tsc --emitDeclarationOnly",
+    "build": "npm run clean && npm run build:js && npm run build:types",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit && tsc -p tsconfig.test.json",
+    "prepack": "npm run build"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0"
+  },
+  "dependencies": {
+    "@russian-flags/regions": "^1.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^26.0.0",
+    "@types/react": "^19.1.8",
+    "esbuild": "^0.25.5",
+    "react": "^19.2.7",
+    "typescript": "^5.8.3",
+    "vitest": "^4.1.9"
+  }
+}
