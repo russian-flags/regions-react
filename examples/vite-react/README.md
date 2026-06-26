@@ -2,14 +2,18 @@
 
 Минимальный пример подключения `@russian-flags/regions-react` в React-приложении.
 
-Перед запуском примера соберите пакет из корня репозитория:
+Запуск:
 
 ```bash
-npm install
-npm run build
 cd examples/vite-react
 npm install
 npm run dev
+```
+
+Сборка:
+
+```bash
+npm run build
 ```
 
 В примере показаны:
@@ -19,9 +23,3 @@ npm run dev
 - inline-вставка SVG напрямую из базового `@russian-flags/regions/svg/ta.svg?raw`.
 
 Прямой импорт React-компонента отдельного флага показан в основном README пакета.
-
-`vite.config.ts` специально фиксирует `react` и `react-dom` на зависимости
-самого примера и исключает `@russian-flags/regions-react` из Vite pre-bundling.
-Это нужно для локального `file:../..` подключения пакета из этого же
-репозитория: так в dev-режиме не появляются две копии React, а SVG-ассеты
-остаются привязаны к реальным файлам пакета.

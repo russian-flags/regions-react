@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@russian-flags/regions": "^1.0.1",
-    "@russian-flags/regions-react": "file:../..",
+    "@russian-flags/regions-react": "^1.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
